@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Data Structures - PYTHONIA</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="../logo.png" alt="PYTHONIA" class="logo">
+                <span class="logo-text">PYTHONIA</span>
+            </div>
+            <div class="nav-items">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about.html" class="nav-link">About</a>
+                <a href="../profile.html" class="nav-link">Profile</a>
+                <a href="../notes.html" class="nav-link home">Notes</a>
+                <a href="../test.html" class="nav-link">Test</a>
+                <a href="../signin.html" class="nav-link signin-link">Sign in</a>
+            </div>
+            <button class="register-btn" onclick="window.location.href='../register.html'">Register</button>
+        </div>
+    </nav>
+
+    <main class="note-content">
+        <div class="topic-navigation">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#tuples">Tuples</a></li>
+                <li><a href="#dictionaries">Dictionaries</a></li>
+                <li><a href="#sets">Sets</a></li>
+                <li><a href="#advanced">Advanced Topics</a></li>
+                <li><a href="#practice">Practice Exercises</a></li>
+            </ul>
+        </div>
+
+        <h1>Python Data Structures</h1>
+        <p class="introduction">
+            Python provides several built-in data structures that are optimized for different types of operations.
+            Understanding these data structures is crucial for writing efficient and maintainable code.
+        </p>
+        
+        <div id="lists" class="topic-section">
+            <h2>1. Lists</h2>
+            <p>Lists are ordered, mutable sequences of elements. They can contain elements of different types.</p>
+            
+            <div class="time-complexity">
+                <h4>Time Complexity</h4>
+                <ul>
+                    <li>Access: O(1)</li>
+                    <li>Insert/Delete at end: O(1)</li>
+                    <li>Insert/Delete at beginning: O(n)</li>
+                    <li>Search: O(n)</li>
+                </ul>
+            </div>
+            
+            <div class="code-example">
+                <button class="copy-btn">Copy</button>
+                <pre><code class="language-python">
+# Creating and using lists
+fruits = ['apple', 'banana', 'orange']
+numbers = [1, 2, 3, 4, 5]
+
+# Common list operations
+fruits.append('grape')    # Add element
+fruits.pop()             # Remove last element
+fruits.insert(1, 'kiwi') # Insert at position
+fruits.remove('banana')   # Remove specific element
+                </code></pre>
+            </div>
+
+            <div class="interactive-demo">
+                <h3>Try it yourself:</h3>
+                <textarea id="list-demo" rows="5" class="code-input"></textarea>
+                <button onclick="runListDemo()">Run Code</button>
+                <div id="list-output" class="output"></div>
+            </div>
+        </div>
+
+        <div id="tuples" class="topic-section">
+            <h2>2. Tuples</h2>
+            <p>Tuples are immutable sequences, typically used to store collections of heterogeneous data. Since tuples are immutable, they can be used as dictionary keys and are generally more memory efficient than lists.</p>
+            
+            <div class="time-complexity">
+                <h4>Time Complexity</h4>
+                <ul>
+                    <li>Access: O(1)</li>
+                    <li>Search: O(n)</li>
+                    <li>Hash (for dictionary keys): O(1)</li>
+                </ul>
+            </div>
+            
+            <div class="code-example">
+                <button class="copy-btn">Copy</button>
+                <pre><code class="language-python">
+# Creating and using tuples
+coordinates = (10, 20)
+person = ('John', 25, 'New York')
+
+# Tuple operations
+x, y = coordinates        # Unpacking
+name, age, city = person  # Multiple assignment
+                </code></pre>
+            </div>
+        </div>
+
+        <div id="dictionaries" class="topic-section">
+            <h2>3. Dictionaries</h2>
+            <p>Dictionaries are mutable mappings of key-value pairs. They provide fast access to values through unique keys and are implemented using hash tables.</p>
+            
+            <div class="time-complexity">
+                <h4>Time Complexity</h4>
+                <ul>
+                    <li>Access: O(1) average case</li>
+                    <li>Insert: O(1) average case</li>
+                    <li>Delete: O(1) average case</li>
+                    <li>Search by key: O(1) average case</li>
+                    <li>Search by value: O(n)</li>
+                </ul>
+            </div>
+            
+            <div class="implementation-note">
+                Note: Dictionary performance can degrade to O(n) in worst-case scenarios due to hash collisions.
+            </div>
+            
+            <div class="code-example">
+                <button class="copy-btn">Copy</button>
+                <pre><code class="language-python">
+# Creating and using dictionaries
+student = {
+    'name': 'Alice',
+    'age': 20,
+    'grades': {'math': 90, 'science': 85}
+}
+
+# Dictionary operations
+student['course'] = 'Python'  # Add new key-value
+del student['age']           # Remove key-value
+print(student.get('name'))   # Safe access
+                </code></pre>
+            </div>
+        </div>
+
+        <div id="sets" class="topic-section">
+            <h2>4. Sets</h2>
+            <p>Sets are unordered collections of unique elements. They are implemented using hash tables and are optimized for fast membership testing.</p>
+            
+            <div class="time-complexity">
+                <h4>Time Complexity</h4>
+                <ul>
+                    <li>Add: O(1) average case</li>
+                    <li>Remove: O(1) average case</li>
+                    <li>Membership testing: O(1) average case</li>
+                    <li>Union/Intersection: O(min(len(s), len(t))) where s,t are sets</li>
+                </ul>
+            </div>
+            
+            <div class="implementation-note">
+                Note: Like dictionaries, set operations can degrade to O(n) in worst-case scenarios.
+            </div>
+            
+            <div class="code-example">
+                <button class="copy-btn">Copy</button>
+                <pre><code class="language-python">
+# Creating and using sets
+numbers = {1, 2, 3, 4, 5}
+more_numbers = {4, 5, 6, 7, 8}
+
+# Set operations
+union = numbers | more_numbers
+intersection = numbers & more_numbers
+difference = numbers - more_numbers
+                </code></pre>
+            </div>
+        </div>
+
+        <div id="advanced" class="topic-section">
+            <h2>Advanced Topics</h2>
+            
+            <div class="advanced-topic">
+                <h3>Collections Module</h3>
+                <p>Python's collections module provides additional data structures:</p>
+                <ul>
+                    <li><code>defaultdict</code>: Dictionary subclass with default values</li>
+                    <li><code>Counter</code>: Dict subclass for counting hashable objects</li>
+                    <li><code>deque</code>: Double-ended queue with fast appends and pops</li>
+                    <li><code>namedtuple</code>: Tuple subclass with named fields</li>
+                </ul>
+                
+                <div class="code-example">
+                    <button class="copy-btn">Copy</button>
+                    <pre><code class="language-python">
+from collections import defaultdict, Counter, deque
+# defaultdict example
+word_count = defaultdict(int)
+for word in ['apple', 'banana', 'apple', 'cherry']:
+    word_count[word] += 1
+
+# Counter example
+inventory = Counter(['apple', 'banana', 'apple', 'cherry'])
+
+# deque example
+queue = deque(['first', 'second'])
+queue.appendleft('new_first')
+queue.append('last')
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="practice" class="topic-section">
+            <h2>Practice Exercises</h2>
+            
+            <div class="practice-exercise">
+                <h3>Exercise 1: List Manipulation</h3>
+                <p>Create a list of numbers 1-5, then write code to double each number in the list.</p>
+                <div class="code-demo">
+                    <textarea class="code-input" rows="4">numbers = [1, 2, 3, 4, 5]
+# Add your solution here</textarea>
+                    <button onclick="runPythonCode(document.querySelector('.code-input').value, 'exercise1-output')">Run Code</button>
+                    <div id="exercise1-output"></div>
+                </div>
+                <button class="solution-btn" onclick="toggleSolution('solution1')">Show Solution</button>
+                <div id="solution1" class="solution">
+                    <pre><code class="language-python">
+numbers = [1, 2, 3, 4, 5]
+doubled = [num * 2 for num in numbers]
+print(doubled)  # Output: [2, 4, 6, 8, 10]
+                    </code></pre>
+                </div>
+            </div>
+
+            <div class="practice-exercise">
+                <h3>Exercise 2: Dictionary Challenge</h3>
+                <p>Create a dictionary of student grades and calculate the average grade.</p>
+                <div class="code-demo">
+                    <textarea class="code-input" rows="4">grades = {'math': 90, 'english': 85, 'science': 88}
+# Add your solution here</textarea>
+                    <button onclick="runPythonCode(document.querySelector('.code-input').value, 'exercise2-output')">Run Code</button>
+                    <div id="exercise2-output"></div>
+                </div>
+                <button class="solution-btn" onclick="toggleSolution('solution2')">Show Solution</button>
+                <div id="solution2" class="solution">
+                    <pre><code class="language-python">
+grades = {'math': 90, 'english': 85, 'science': 88}
+average = sum(grades.values()) / len(grades)
+print(f"Average grade: {average}")
+                    </code></pre>
+                </div>
+            </div>
+
+            <div class="quiz-section" id="knowledge-check">
+                <h3>Knowledge Check</h3>
+                <div class="quiz-question">
+                    <p>Which data structure would be most efficient for checking if an element exists in a collection?</p>
+                    <div class="quiz-options">
+                        <label>
+                            <input type="radio" name="q1" value="list"> List
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="set"> Set
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="tuple"> Tuple
+                        </label>
+                    </div>
+                    <button onclick="checkAnswer('q1', 'set')">Check Answer</button>
+                    <div id="q1-result"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Copy button functionality
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const code = button.nextElementSibling.textContent;
+                navigator.clipboard.writeText(code);
+                button.textContent = 'Copied!';
+                setTimeout(() => button.textContent = 'Copy', 2000);
+            });
+        });
+
+        // Toggle solution visibility
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const button = solution.previousElementSibling;
+            if (solution.style.display === 'none' || !solution.style.display) {
+                solution.style.display = 'block';
+                button.textContent = 'Hide Solution';
+            } else {
+                solution.style.display = 'none';
+                button.textContent = 'Show Solution';
+            }
+        }
+    </script>
+</body>
+</html>
