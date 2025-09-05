@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - PYTHONIA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="profile.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <img src="logo.png" alt="PYTHONIA" class="logo">
+                <span class="logo-text">PYTHONIA</span>
+            </div>
+            <div class="nav-items">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="profile.html" class="nav-link home">Profile</a>
+                <a href="notes.html" class="nav-link">Notes</a>
+                <a href="test.html" class="nav-link">Test</a>
+                <a href="signin.html" class="nav-link signin-link">Sign in</a>
+            </div>
+            <button class="register-btn" onclick="window.location.href='register.html'">Register</button>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <div class="content-container">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=face" alt="Profile Avatar" class="avatar-img">
+                    <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                </div>
+                <div class="profile-info">
+                    <h1>Alex Johnson</h1>
+                    <p class="profile-title">Computer Science Student</p>
+                    <p class="profile-email">alex.johnson@email.com</p>
+                    <button class="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+                </div>
+            </div>
+
+            <div class="profile-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
+                    <div class="stat-info">
+                        <h3>127</h3>
+                        <p>Tests Completed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-info">
+                        <h3>89%</h3>
+                        <p>Average Score</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-info">
+                        <h3>42</h3>
+                        <p>Achievements</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-info">
+                        <h3>15</h3>
+                        <p>Day Streak</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-sections">
+                <div class="section">
+                    <h2>📈 Learning Progress</h2>
+                    <div class="progress-subjects">
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span>Mathematics</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span>Programming</span>
+                                <span>92%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span>Science</span>
+                                <span>78%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="subject-progress">
+                            <div class="subject-header">
+                                <span>Language Arts</span>
+                                <span>88%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>🏅 Recent Achievements</h2>
+                    <div class="achievements">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">🎯</div>
+                            <div class="achievement-info">
+                                <h4>Perfect Score Master</h4>
+                                <p>Achieved 100% on 5 consecutive tests</p>
+                                <span class="achievement-date">2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">📚</div>
+                            <div class="achievement-info">
+                                <h4>Study Streak Champion</h4>
+                                <p>Maintained 15-day learning streak</p>
+                                <span class="achievement-date">1 week ago</span>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">💻</div>
+                            <div class="achievement-info">
+                                <h4>Programming Pro</h4>
+                                <p>Completed advanced Python assessment</p>
+                                <span class="achievement-date">2 weeks ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>⚙️ Account Settings</h2>
+                    <div class="settings-options">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Email Notifications</h4>
+                                <p>Receive updates about new tests and achievements</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>Dark Mode</h4>
+                                <p>Switch to dark theme for better viewing</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h4>AI Difficulty Adaptation</h4>
+                                <p>Let AI adjust test difficulty based on performance</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 

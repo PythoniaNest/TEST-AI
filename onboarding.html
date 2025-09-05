@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Your Learning Journey</title>
+    <link rel="stylesheet" href="onboarding.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step" data-step="1">1</div>
+            <div class="progress-step" data-step="2">2</div>
+            <div class="progress-step" data-step="3">3</div>
+            <div class="progress-step" data-step="4">4</div>
+            <div class="progress-step" data-step="5">5</div>
+        </div>
+
+        <form id="onboarding-form">
+            <!-- Step 1: Personal Details -->
+            <div class="form-step active" data-step="1">
+                <h1>Create Your Account</h1>
+                <p>Let's start with some basic information</p>
+                <div class="form-group">
+                    <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                    <input type="password" id="password" name="password" placeholder="Create Password" required>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-next">Continue →</button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Welcome -->
+            <div class="form-step" data-step="2">
+                <h1>Welcome to Your Learning Journey!</h1>
+                <p>Let's create a personalized learning path just for you.</p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-prev">← Back</button>
+                    <button type="button" class="btn btn-next">Get Started →</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Learning Goals -->
+            <div class="form-step" data-step="2">
+                <h2>What brings you here today?</h2>
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <input type="radio" name="goal" id="career" value="career">
+                        <label for="career">
+                            <h3>Career Growth</h3>
+                            <p>Learn new skills for job opportunities</p>
+                        </label>
+                    </div>
+                    <div class="goal-card">
+                        <input type="radio" name="goal" id="hobby" value="hobby">
+                        <label for="hobby">
+                            <h3>Personal Interest</h3>
+                            <p>Learn for fun and curiosity</p>
+                        </label>
+                    </div>
+                    <div class="goal-card">
+                        <input type="radio" name="goal" id="academic" value="academic">
+                        <label for="academic">
+                            <h3>Academic Success</h3>
+                            <p>Support your studies</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-prev">← Back</button>
+                    <button type="button" class="btn btn-next">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Experience Level -->
+            <div class="form-step" data-step="3">
+                <h2>What's your experience level?</h2>
+                <div class="level-slider">
+                    <input type="range" min="1" max="3" value="1" id="experience-level">
+                    <div class="level-labels">
+                        <span>Beginner</span>
+                        <span>Intermediate</span>
+                        <span>Advanced</span>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-prev">← Back</button>
+                    <button type="button" class="btn btn-next">Continue →</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Topics -->
+            <div class="form-step" data-step="4">
+                <h2>What would you like to learn?</h2>
+                <div class="topics-grid">
+                    <div class="topic-card">
+                        <input type="checkbox" name="topics" id="python" value="python">
+                        <label for="python">Python Programming</label>
+                    </div>
+                    <div class="topic-card">
+                        <input type="checkbox" name="topics" id="web-dev" value="web-dev">
+                        <label for="web-dev">Web Development</label>
+                    </div>
+                    <div class="topic-card">
+                        <input type="checkbox" name="topics" id="data-science" value="data-science">
+                        <label for="data-science">Data Science</label>
+                    </div>
+                    <div class="topic-card">
+                        <input type="checkbox" name="topics" id="ai-ml" value="ai-ml">
+                        <label for="ai-ml">AI & Machine Learning</label>
+                    </div>
+                    <div class="topic-card">
+                        <input type="checkbox" name="topics" id="cybersecurity" value="cybersecurity">
+                        <label for="cybersecurity">Cybersecurity</label>
+                    </div>
+                    <div class="topic-card">
+                        <input type="checkbox" name="topics" id="cloud" value="cloud">
+                        <label for="cloud">Cloud Computing</label>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-prev">← Back</button>
+                    <button type="submit" class="btn btn-submit">Create My Learning Path</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="onboarding.js"></script>
+</body>
+</html>

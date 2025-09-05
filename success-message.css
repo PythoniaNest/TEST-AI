@@ -1,0 +1,57 @@
+.success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+.success-content {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.success-message .fa-check-circle {
+    font-size: 24px;
+    color: white;
+}
+
+.success-message p {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.success-message .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.success-message .close-btn:hover {
+    opacity: 1;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,132 @@
+.code-demo {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.code-output {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.code-error {
+    background: #350505;
+    color: #ff9999;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-family: 'Consolas', 'Courier New', monospace;
+}
+
+.interactive-section {
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.topic-navigation {
+    position: sticky;
+    top: 20px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.topic-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topic-navigation li {
+    margin: 0.5rem 0;
+}
+
+.topic-navigation a {
+    color: #0366d6;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.topic-navigation a:hover {
+    background-color: #f6f8fa;
+}
+
+.quiz-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.quiz-question {
+    margin: 1.5rem 0;
+}
+
+.quiz-options label {
+    display: block;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quiz-options label:hover {
+    background-color: #e9ecef;
+}
+
+.quiz-options input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.quiz-correct {
+    color: #28a745;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.quiz-incorrect {
+    color: #dc3545;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.quiz-warning {
+    color: #ffc107;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.practice-examples {
+    border-left: 4px solid #0366d6;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+}
+
+.implementation-note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+.time-complexity {
+    background: #e7f5ff;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+}
